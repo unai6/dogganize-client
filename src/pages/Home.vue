@@ -48,7 +48,7 @@ h2 {
 
 .h2-container {
   background: white;
-  width: 20%;
+  width: 20em;
   position: relative;
   left: 70%;
   top: 15%;
