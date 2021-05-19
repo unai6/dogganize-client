@@ -36,7 +36,7 @@ export default {
 .spinner {
   border-radius: 6px;
   position: relative;
-  border: 4px solid orange;
+  border: 4px solid #E57B54;
   animation: loader 2s infinite ease;
   line-height: 0;
   box-sizing: border-box;
@@ -45,7 +45,7 @@ export default {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: orange;
+  background-color: #E57B54;
   animation: loader-inner 2s infinite ease-in;
 }
 

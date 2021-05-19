@@ -29,6 +29,6 @@ div span{
 }
 
 .todo-number{
-    color: orange;
+    color: #E57B54;
 }
 </style>

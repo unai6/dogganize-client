@@ -44,6 +44,7 @@ export default {
 
   methods: {
     async submitForm () {
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
       if (
         this.userName === '' ||
         this.userEmail === '' ||
@@ -52,6 +53,12 @@ export default {
         this.isLoading = false
         this.error = true
         this.errorMessage = 'Please fill all the gaps'
+        return
+      }
+
+      if (!this.userEmail.match(emailRegex)) {
+        this.error = true
+        this.errorMessage = 'Please provide a valid email'
         return
       }
 
@@ -77,8 +84,10 @@ export default {
           this.$router.replace(`/${userId}/todos`)
         }
       } catch (err) {
-        this.errorMessage = err
-        throw new Error('wrong signup')
+        this.isLoading = false
+        this.error = true
+        this.errorMessage = 'The email provided already exists'
+        throw new Error('wrong signup', err)
       }
     },
     closeError () {
@@ -87,5 +96,3 @@ export default {
   }
 }
 </script>
-
-

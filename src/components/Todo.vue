@@ -111,7 +111,7 @@ span {
 
 .active-data {
   background: transparent;
-  border: 3px solid orange;
+  border: 3px solid #4C4C4C;
   padding: 1em;
   cursor: pointer;
   margin-top: 1em;

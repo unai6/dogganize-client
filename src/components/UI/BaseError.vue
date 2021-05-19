@@ -28,9 +28,11 @@ dialog {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 25%;
+  top: 10%;
   height: 25%;
-  width: 50%;
+  width: 25%;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
 }
 
 menu {
@@ -49,7 +51,9 @@ menu > button {
 }
 
 .error-text {
-  color: red;
+  display: inline-block;
+  color: #2c3e50;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 </style>

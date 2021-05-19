@@ -28,8 +28,8 @@ div {
 }
 
 h2 {
-  color: orange;
-  border: 1px solid orange;
+  color: #E57B54;
+  border: 1px solid #E57B54;
   padding: 1em;
   border-radius: 8px;
 }

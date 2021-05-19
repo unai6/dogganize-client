@@ -66,7 +66,9 @@ export default {
           this.$router.replace(`/${userId}/todos`)
         }
       } catch (err) {
-        this.errorMessage = err
+        this.isLoading = false;
+        this.error = true;
+        this.errorMessage = 'The email or password provided are not correct'
         throw new Error('Error while loading user data', err.response)
       }
     },

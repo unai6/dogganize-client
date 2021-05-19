@@ -3,7 +3,7 @@
     <div class="h2-container">
       <h2>DOGGANIZE <i class="fas fa-paw"></i></h2>
       <google-login v-if="!userIsAuthenticated" text="Log in"> </google-login>
-      <base-separator></base-separator>
+      <base-separator v-if="!userIsAuthenticated"></base-separator>
       <router-link to="/auth/login" v-if="!userIsAuthenticated"
         ><base-button>Log in to your account</base-button></router-link
       >
@@ -34,6 +34,7 @@ export default {
     },
 
     getUserIdRouterLink () {
+      console.log(this.userId)
       return `/${this.userId}/todos`
     }
   }
@@ -50,17 +51,16 @@ h2 {
   background: white;
   width: 20em;
   position: relative;
-  left: 70%;
-  top: 15%;
+  left: 55%;
+  top: 10%;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .background-div {
-  background: url('https://cdn.pixabay.com/photo/2017/07/03/09/54/dog-2467149_1280.jpg')
-    center no-repeat;
-  background-size: cover;
+  background: url('../assets/backgrund-home.png')center no-repeat;
+  background-size: contain;
   position: absolute;
   top: 0;
   height: 100%;
@@ -78,6 +78,7 @@ span {
 }
 
 .signup-link:hover {
-  color: darkorange;
+  color: #e57b54;
+  font-weight: 700;
 }
 </style>

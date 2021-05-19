@@ -17,8 +17,8 @@ export default {
 <style scoped>
 .go-back {
   background: transparent;
-  border: 1px solid orange;
-  color: darkorange;
+  border: 1px solid #E57B54;
+  color: #E57B54;
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: .5rem;
