@@ -6,14 +6,28 @@
           <base-button type="button" class="close-modal" @click="showModal">
             &times;
           </base-button>
-          <input type="text" v-model="todoName" placeholder="new Name" />
-          <textarea
-            type="textarea"
-            rows="2"
-            v-model="todoInfo"
-            placeholder="new Info"
-          />
-          <base-button @click="changeSubmitContent">{{ successChange }}</base-button>
+          <div>
+            <label for="name">Task Name</label>
+            <input
+              id="name"
+              type="text"
+              v-model="todoName"
+              placeholder="new Name"
+            />
+          </div>
+          <div>
+            <label for="info">Task Info</label>
+            <textarea
+              id="info"
+              type="textarea"
+              rows="6"
+              v-model="todoInfo"
+              placeholder="new Info"
+            />
+          </div>
+          <base-button @click="changeSubmitContent">{{
+            successChange
+          }}</base-button>
         </template>
       </base-todo>
       <base-error
@@ -92,18 +106,23 @@ export default {
 }
 .close-modal {
   position: relative;
-  left: 25em;
-  top: 2em;
+  left: 14em;
+  top: 1em;
 }
 
 form {
   background: white;
-  width: 50%;
+  width: 30%;
   margin: auto;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 50%);
   border-radius: 10px;
+}
+
+div{
+  width: 90%;
+  margin: auto;
 }
 
 /**animations */

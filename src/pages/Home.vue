@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style scoped>
+
 .home-container {
   background: rgb(229, 123, 84);
   height: 90vh;

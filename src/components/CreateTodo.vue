@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="create-todo-container">
     <base-back-button>
       BACK
     </base-back-button>
@@ -10,13 +10,13 @@
           <input
             type="text"
             v-model="todoName"
-            placeholder="TYPE YOUR TITLE*"
+            placeholder="Type task title*"
           />
           <textarea
             type="textarea"
             rows="10"
             v-model="todoInfo"
-            placeholder="TYPE YOUR INFO*"
+            placeholder="Type task info*"
           />
           <base-error
             open
@@ -72,24 +72,38 @@ export default {
 </script>
 
 <style>
-a,
-a:hover {
-  text-decoration: none;
-}
-input {
-  width: 25%;
-  display: block;
+
+.create-todo-container{
+  width: 50%;
   margin: auto;
+}
+
+label {
+  display: block;
+  text-align: start;
+  font-weight: 600;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #ff8a67;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: #282828;
+  background-color: #fff;
   margin-bottom: 1em;
-  height: 2em;
-  border-radius: 5px;
 }
 textarea {
-  width: 25%;
-  display: block;
-  margin: auto;
+  border-radius: 8px;
+  border: 1px solid #ff8a67;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0.5rem;
   margin-bottom: 1em;
-  height: 8em;
-  border-radius: 5px;
+  color: #282828;
+  background-color: #fff;
 }
 </style>

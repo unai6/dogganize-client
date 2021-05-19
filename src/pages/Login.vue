@@ -4,12 +4,24 @@
       BACK
     </base-back-button>
     <h2>LOGIN</h2>
-    <form @submit.prevent="submitForm" autocomplete="off">
+    <base-form @submit.prevent="submitForm" autocomplete="off">
       <div>
-        <input type="email" v-model.trim="userEmail" placeholder="Email" />
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          v-model.trim="userEmail"
+          placeholder="Email"
+        />
       </div>
       <div>
-        <input type="password" v-model.trim="password" placeholder="Password" />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          v-model.trim="password"
+          placeholder="Password"
+        />
       </div>
       <base-error
         open
@@ -19,7 +31,7 @@
       ></base-error>
       <base-button v-if="!isLoading && !error">LOGIN</base-button>
       <base-loader v-if="isLoading && !error"></base-loader>
-    </form>
+    </base-form>
   </div>
 </template>
 
@@ -66,8 +78,8 @@ export default {
           this.$router.replace(`/${userId}/todos`)
         }
       } catch (err) {
-        this.isLoading = false;
-        this.error = true;
+        this.isLoading = false
+        this.error = true
         this.errorMessage = 'The email or password provided are not correct'
         throw new Error('Error while loading user data', err.response)
       }

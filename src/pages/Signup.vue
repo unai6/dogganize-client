@@ -6,15 +6,18 @@
     <h2>Create your account</h2>
     <google-login text="Sign up"> </google-login>
     <base-separator></base-separator>
-    <form @submit.prevent="submitForm">
+    <base-form @submit.prevent="submitForm">
       <div>
-        <input type="text" v-model.trim="userName" placeholder="User Name" />
+        <label for="name">User Name</label>
+        <input id="name" type="text" v-model.trim="userName" placeholder="User Name" />
       </div>
       <div>
-        <input type="email" v-model.trim="userEmail" placeholder="Email" />
+        <label for="email">Email</label>
+        <input id="email" type="email" v-model.trim="userEmail" placeholder="Email" />
       </div>
       <div>
-        <input type="password" v-model.trim="password" placeholder="Password" />
+        <label for="password">Password</label>
+        <input id="password" type="password" v-model.trim="password" placeholder="Password" />
       </div>
       <base-error
         open
@@ -24,7 +27,7 @@
       ></base-error>
       <base-button v-if="!isLoading && !error">SIGNUP</base-button>
       <base-loader v-if="isLoading && !error"></base-loader>
-    </form>
+    </base-form>
   </div>
 </template>
 

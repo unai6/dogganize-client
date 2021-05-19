@@ -1,5 +1,5 @@
 <template>
-    <router-view></router-view>
+  <router-view></router-view>
 </template>
 
 <style>
@@ -9,5 +9,9 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+a,
+a:hover {
+  text-decoration: none;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="loader-container">
-    <span :style="styles" class="spinner spinner--rotate-square4">
+    <span :style="styles" class="spinner">
       <span class="loader-inner"></span>
     </span>
   </div>
