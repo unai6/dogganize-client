@@ -1,6 +1,6 @@
 <template>
-  <div class="background-div">
-    <div class="h2-container">
+  <div class="home-container">
+    <div class="registration-container">
       <h2>DOGGANIZE <i class="fas fa-paw"></i></h2>
       <google-login v-if="!userIsAuthenticated" text="Log in"> </google-login>
       <base-separator v-if="!userIsAuthenticated"></base-separator>
@@ -16,6 +16,9 @@
         <base-button>Go to my Dashboard</base-button>
       </router-link>
     </div>
+    <img class="img-2" src="../assets/backgrund-home-reversed.png " />
+    <img class="img-1" src="../assets/dog-2.png" />
+    <footer class="footer"></footer>
   </div>
 </template>
 
@@ -42,30 +45,38 @@ export default {
 </script>
 
 <style scoped>
+.home-container {
+  background: rgb(229, 123, 84);
+  height: 90vh;
+}
 h2 {
   font-size: 2em;
-  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 3px 6px rgba(8, 5, 5, 0.5);
 }
 
-.h2-container {
+.registration-container {
   background: white;
   width: 20em;
-  position: relative;
-  left: 55%;
-  top: 10%;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 50%);
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 5px rgb(0 0 0 / 50%);
 }
 
-.background-div {
-  background: url('../assets/backgrund-home.png')center no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  left: 0;
+.img-1 {
+  z-index: 3 !important;
+  position: relative;
+  left: 7em;
+  top: 1em;
+  height: 25em;
+}
+.img-2 {
+  z-index: 3 !important;
+  position: relative;
+  right: 6em;
+  top: 6em;
 }
 span {
   display: inline-block;
@@ -80,5 +91,17 @@ span {
 .signup-link:hover {
   color: #e57b54;
   font-weight: 700;
+}
+
+.footer {
+  height: 10vh;
+  background: #2c3e50;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 99%;
+  display: block;
+  margin: auto;
 }
 </style>
