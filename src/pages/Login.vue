@@ -91,3 +91,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+label {
+  @include label;
+}
+
+input {
+  @include formInput;
+}
+</style>

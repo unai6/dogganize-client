@@ -4,24 +4,23 @@
   </button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 button {
   cursor: pointer;
   padding: 1em;
   border-radius: 5px;
   border: none;
-  background: #E57B54;
+  background: $color-primary;
   font-weight: 600;
   display: block;
   margin: auto;
   margin-bottom: 1rem;
-  color: white;
-}
+  color: $color-white;
 
-button:hover {
-  transform: scale(1.02);
-  color: #424242;
+  &:hover {
+    transform: scale(1.02);
+    color: #424242;
+  }
 }
-
 </style>

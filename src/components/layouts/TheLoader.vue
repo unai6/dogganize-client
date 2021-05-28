@@ -1,7 +1,7 @@
 <template>
   <div class="loader-container">
-    <span :style="styles" class="spinner">
-      <span class="loader-inner"></span>
+    <span :style="styles" class="loader-container__spinner">
+      <span class="loader-container__inner"></span>
     </span>
   </div>
 </template>
@@ -27,60 +27,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .loader-container {
   display: flex;
   justify-content: center;
+
+  &__spinner {
+    border-radius: 6px;
+    position: relative;
+    border: 4px solid #e57b54;
+    animation: loader 2s infinite ease;
+    line-height: 0;
+    box-sizing: border-box;
+  }
+  &__inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #e57b54;
+    animation: loader-inner 2s infinite ease-in;
+  }
 }
 
-.spinner {
-  border-radius: 6px;
-  position: relative;
-  border: 4px solid #E57B54;
-  animation: loader 2s infinite ease;
-  line-height: 0;
-  box-sizing: border-box;
-}
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #E57B54;
-  animation: loader-inner 2s infinite ease-in;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-180deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  75% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
 </style>

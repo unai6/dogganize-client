@@ -10,8 +10,6 @@ export default {
             console.log(err.response)
             throw new Error('Something went wrong while fetching todos', err.response)
         }
-
-
     },
     async createTodo(context, payload) {
         try {

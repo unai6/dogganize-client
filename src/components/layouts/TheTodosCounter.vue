@@ -1,6 +1,10 @@
 <template>
-  <div>
-      <span>YOU HAVE <b class='todo-number'>{{todosLength}}</b> TASKS LEFT</span>
+  <div class="counter">
+    <span class="counter__span"
+      >YOU HAVE
+      <b class="counter__number">{{ todosLength }}</b> TASKS
+      LEFT</span
+    >
   </div>
 </template>
 
@@ -15,20 +19,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.counter {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5em;
+  margin-bottom: 1em;
 
-div{
-    width: 100vw;
-    background: rgba(0,0,0, .7);
-    padding:.5em;
-    margin-bottom: 1em;
-}
+  &__span {
+    color: $color-white;
+  }
 
-div span{
-    color: white;
-}
-
-.todo-number{
-    color: #E57B54;
+  &__number {
+    color: $color-primary;
+  }
 }
 </style>

@@ -71,39 +71,20 @@ export default {
 }
 </script>
 
-<style>
-
-.create-todo-container{
+<style lang="scss" scoped>
+.create-todo-container {
   width: 50%;
   margin: auto;
 }
 
 label {
-  display: block;
-  text-align: start;
-  font-weight: 600;
+  @include label;
 }
 
 input {
-  border-radius: 8px;
-  border: 1px solid #ff8a67;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 1rem;
-  padding: 0.5rem;
-  color: #282828;
-  background-color: #fff;
-  margin-bottom: 1em;
+  @include formInput;
 }
 textarea {
-  border-radius: 8px;
-  border: 1px solid #ff8a67;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 1em;
-  color: #282828;
-  background-color: #fff;
+  @include formTextArea;
 }
 </style>

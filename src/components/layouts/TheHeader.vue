@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 div {
   display: block;
   width: 50%;
@@ -30,8 +30,8 @@ div {
 }
 
 h2 {
-  color: #e57b54;
-  border: 1px solid #e57b54;
+  color: $color-primary;
+  border: 1px solid $color-primary;
   padding: 1em;
   border-radius: 8px;
 }

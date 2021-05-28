@@ -1,10 +1,10 @@
 <template>
-  <dialog>
+  <dialog class="dialog-container">
     <slot>
       <div>
         <span class="error-text">{{ message }}</span>
       </div>
-      <menu>
+      <menu class="dialog-container__menu">
         <base-button @click="this.$emit('close-error')">
           Okay
         </base-button>
@@ -12,6 +12,7 @@
     </slot>
   </dialog>
 </template>
+
 <script>
 export default {
   props: {
@@ -23,37 +24,31 @@ export default {
 }
 </script>
 
-<style>
-dialog {
+<style lang="scss">
+.dialog-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   top: 10%;
   height: 25%;
   width: 25%;
-  border: 1px solid #2c3e50;
+  border: 1px solid $text-color-dark;
   border-radius: 8px;
-}
 
-menu {
-  margin: 0;
-  padding: 0;
-}
+  &__menu {
+    margin: 0;
+    padding: 0;
 
-menu > button {
-  cursor: pointer;
-  background: orange;
-  width: 50%;
-  margin: auto;
-  display: block;
-  text-align: center;
-  color: white;
-}
+    button {
+      width: 50%;
+    }
+  }
 
-.error-text {
-  display: inline-block;
-  color: #2c3e50;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  .error-text {
+    display: inline-block;
+    color: $text-color-dark;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
 }
 </style>

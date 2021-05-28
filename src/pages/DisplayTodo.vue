@@ -1,11 +1,11 @@
 <template>
-  <section v-if="userIsAuthenticated">
+  <section v-if="userIsAuthenticated" class="dashboard">
     <the-header>
       <template #h2> DOGGANIZE <i class="fas fa-dog"></i> </template>
     </the-header>
     <the-todos-counter :todosLength="getTodosLength"> </the-todos-counter>
     <router-link to="create-todo"
-      ><base-button class="create-todo">
+      ><base-button class="dashboard__btn--create-todo">
         ADD DOG/ OWNER TASK <i class="fas fa-plus"></i>
       </base-button>
     </router-link>
@@ -22,7 +22,7 @@
     </base-todo>
 
     <img
-      class="dashboard-dog"
+      class="dashboard__dog"
       src="https://cdn.pixabay.com/photo/2015/04/22/12/24/dog-734689_1280.jpg"
       alt="dogganized"
     />
@@ -83,26 +83,19 @@ export default {
 }
 </script>
 
-<style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-ul {
-  list-style-type: none;
-}
+<style lang="scss" scoped>
+.dashboard {
+  &__btn--create-todo {
+    padding: 1em;
+    display: block;
+    margin: auto;
+  }
 
-.create-todo {
-  padding: 1em;
-  display: block;
-  margin: auto;
-}
-
-.dashboard-dog {
-  position: fixed;
-  right: 0;
-  width: 34.5em;
-  top: 22em;
+  &__dog {
+    position: fixed;
+    right: 0;
+    width: 34.5em;
+    top: 22em;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button @click="goBack" class="go-back">
+  <button @click="goBack" class="btn--back">
     <slot> </slot>
   </button>
 </template>
@@ -14,15 +14,15 @@ export default {
 }
 </script>
 
-<style scoped>
-.go-back {
+<style lang="scss" scoped>
+.btn--back {
   background: transparent;
-  border: 1px solid #E57B54;
-  color: #E57B54;
+  border: 1px solid $color-primary;
+  color: $color-primary;
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: .5rem;
   cursor: pointer;
-
 }
+
 </style>

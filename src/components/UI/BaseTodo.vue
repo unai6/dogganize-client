@@ -7,14 +7,9 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 div {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  line-height: 2em;
-  justify-content: space-around;
-  padding: 0;
+  @include flexLayout;
 }
 
 div > input {

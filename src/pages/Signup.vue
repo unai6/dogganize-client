@@ -9,15 +9,30 @@
     <base-form @submit.prevent="submitForm">
       <div>
         <label for="name">User Name</label>
-        <input id="name" type="text" v-model.trim="userName" placeholder="User Name" />
+        <input
+          id="name"
+          type="text"
+          v-model.trim="userName"
+          placeholder="User Name"
+        />
       </div>
       <div>
         <label for="email">Email</label>
-        <input id="email" type="email" v-model.trim="userEmail" placeholder="Email" />
+        <input
+          id="email"
+          type="email"
+          v-model.trim="userEmail"
+          placeholder="Email"
+        />
       </div>
       <div>
         <label for="password">Password</label>
-        <input id="password" type="password" v-model.trim="password" placeholder="Password" />
+        <input
+          id="password"
+          type="password"
+          v-model.trim="password"
+          placeholder="Password"
+        />
       </div>
       <base-error
         open
@@ -99,3 +114,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+label {
+  @include label;
+}
+
+input {
+  @include formInput;
+}
+</style>

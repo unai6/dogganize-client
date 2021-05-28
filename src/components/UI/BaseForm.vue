@@ -4,15 +4,17 @@
   </form>
 </template>
 
-<style scoped>
+
+
+<style lang="scss" scoped>
 form {
   border-radius: 8px;
   width: 100%;
   max-width: 25em;
-  background-color: #fff;
+  background-color: $color-white;
   box-sizing: border-box;
   padding: 2rem;
-  border: 1px solid #ff8a67;
+  border: 1px solid $color-primary;
   margin: 2rem;
   margin-top: 1rem;
   margin: auto;
